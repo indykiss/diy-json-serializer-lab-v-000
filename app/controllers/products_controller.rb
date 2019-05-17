@@ -5,16 +5,11 @@ class ProductsController < ApplicationController
 
   def inventory
     product = Product.find(params[:id])
-    if product.inventory > 0
-      render plain: "true"
-    else
-      render plain: "false"
-    end
   end
 
   def data
     product = Product.find(params[:id])
-    render json: ProductSerializer.serialize(product) 
+    render json: ProductSerializer.serialize(product)
   end
 
   def description
