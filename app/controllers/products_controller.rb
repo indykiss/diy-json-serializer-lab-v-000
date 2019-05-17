@@ -9,7 +9,8 @@ class ProductsController < ApplicationController
       render plain: "true"
     else
       render plain: "false"
-    end  end
+    end
+  end
 
   def description
     product = Product.find(params[:id])
